@@ -37,37 +37,20 @@ function SignIn({ setIsLoggedIn }) {
 
     return (
         <div
-            style={{
-                minHeight: "100vh",
-                width: "100%",
-                backgroundImage:
-                    "linear-gradient(to right, #9B2A62, #C057C7, #EDDD53)",
-                overflow: "auto"
-            }}
+            style={{minHeight: "100vh",width: "100%",backgroundImage:"linear-gradient(to right, #9B2A62, #C057C7, #EDDD53)",overflow: "auto"}}
         >
             <form className="signin" onSubmit={Login}>
                 <h2>WELCOME</h2>
 
                 <div className="label">
                     <label htmlFor="email">Email :</label>
-                    <input
-                        type="email"
-                        id="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
+                    <input type="email" id="email"value={email}onChange={(e) => setEmail(e.target.value)}required
                     />
                 </div>
 
                 <div className="label">
                     <label htmlFor="password">Password :</label>
-                    <input
-                        type="password"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
+                    <input type="password" id="password" value={password}onChange={(e) => setPassword(e.target.value)} required/>
                 </div>
 
                 <button type="submit">Submit</button>

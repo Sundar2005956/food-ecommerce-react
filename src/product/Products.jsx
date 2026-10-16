@@ -1,3 +1,4 @@
+
 import { useContext, useEffect, useState } from "react";
 import P_structure from "./P_structure";
 import { useNavigate } from "react-router-dom";
@@ -7,12 +8,12 @@ function Products() {
     const [product, setProduct] = useState([]);
     const navigate = useNavigate();
 
-    const { addtoCart, search } = useContext(Context);
+    const { addtoCart, search, cart } = useContext(Context);
 
     useEffect(() => {
         async function items() {
             let data = await fetch(
-                'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'
+                "https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood"
             );
             let res = await data.json();
             setProduct(res.meals);
@@ -24,32 +25,23 @@ function Products() {
     return (
         <>
             {product
-                .filter((item) =>
-                    item.strMeal.toLowerCase().includes(search.toLowerCase())
-                )
-                .map((item) => (
+                .filter((item) => item.strMeal.toLowerCase().includes(search.toLowerCase()))
+                .map((item) => {const isAdded = cart.some((cartItem) => cartItem.idMeal === item.idMeal );
 
-                    <div key={item.idMeal} style={{ display: "block" }}>
+                    return (
+                        <div key={item.idMeal} style={{ display: "block" }}>
+                            <div onClick={() => navigate(`/productsbyid/${item.idMeal}`)}>
+                                <P_structure item={item} />
+                            </div>
 
-                        <div
-                            onClick={() =>
-                                navigate(`/productsbyid/${item.idMeal}`)
-                            }
-                        >
-                            <P_structure item={item} />
+                            <div style={{ textAlign: "center" }} id="addTocart">
+                                <button onClick={() => addtoCart(item)}style={{backgroundColor: isAdded ? "yellow" : "white",color: "black"}}>
+                                    {isAdded ? "Added ✓" : "+ Add"}
+                                </button>
+                            </div>
                         </div>
-
-                        <div
-                            style={{ textAlign: "center" }}
-                            id="addTocart"
-                        >
-                            <button onClick={() => addtoCart(item)}>
-                                +Add
-                            </button>
-                        </div>
-
-                    </div>
-                ))}
+                    );
+                })}
         </>
     );
 }

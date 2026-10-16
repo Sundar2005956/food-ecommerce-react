@@ -1,6 +1,6 @@
 import '../pages/styles.css'
 function Footer(){
-    return(<div className="footer">
+    return(<div className="footer" style={{position:"relative",bottom:"0px"}}>
         
         <div className="foot">
             <h2>Find us at</h2>

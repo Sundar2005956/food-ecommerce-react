@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 import Chicken_structure from "./Chicken_structure";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +7,7 @@ import { useContext } from "react";
 
 function Chicken(){
     const[item,setItem]=useState([])
-    const{addtoCart}=useContext(Context)
+    const{addtoCart,cart}=useContext(Context)
     const navigate=useNavigate();
     useEffect(()=>{
         async function fetchitem(){
@@ -24,7 +25,7 @@ function Chicken(){
                 <Chicken_structure item={item}/>
                
             </div>
-             <div style={{textAlign:"center",marginTop:"10px"}} id="addTocart"><button  onClick={()=>addtoCart(item)}>+Add</button></div>
+             <div style={{textAlign:"center",marginTop:"10px"}} id="addTocart"><button  onClick={()=>addtoCart(item)} style={{backgroundColor:cart.some((p)=>p.idMeal===item.idMeal)?"yellow":"white",color:"black"}}>{cart.some((p)=>p.idMeal===item.idMeal)?"Added ✓":"+Add"}</button></div>
             </div>
         ))}
     </div>)
