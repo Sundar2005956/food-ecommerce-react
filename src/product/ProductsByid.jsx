@@ -25,7 +25,7 @@ function ProductsByid() {
           <p>Country: {product.strCountry}</p> </div> 
           </center> 
           <div style={{ textAlign: "center", marginTop: "-10px", marginBottom: "10px" }} id="addTocart" >
-            <div style={{ textAlign: "center" }} id="addTocart">
+            <div style={{ textAlign: "center" }} >
                 <button onClick={() => addtoCart(item)}style={{backgroundColor: isAdded ? "yellow" : "white",color: "black"}}>
                      {isAdded ? "Added ✓" : "+ Add"}
                 </button>

@@ -672,10 +672,12 @@
         box-shadow: 0px 0px 11px 3px yellow;
         margin: 20px;
         width: 680px;
-        padding: 15px;
+        padding: 23px;
         font-size: 20px;
         text-align: center;
         font-size: 30px;
+        font-size: 36px;
+       padding-bottom: 60px;
     }
 
     .productsbyid img {
@@ -969,7 +971,7 @@
         width: 110px;
         border-radius: 5px;
         border: none;
-        font-size: 33px;
+        font-size: 30px;
         padding: 5px;
         margin-top: 10px;
         margin-left: 10px;
@@ -1280,7 +1282,7 @@
         border-radius: 20px;
         font-weight: bold;
         padding: 20px;
-        font-size: 35px;
+        font-size: 25px;
         background-color: #fff;
         width: 50%;
         color: black;
@@ -1302,7 +1304,7 @@
     #aboutid img {
         width: 230px;
         height: 250px;
-        margin-top: 100px;
+        margin-top: 10px;
         border-radius: 30px;
         margin-left: 100px;
 
@@ -1313,8 +1315,28 @@
 .signin #email{
     margin-left: 45px;
 } 
-      
+      .productsbyid {
+        box-shadow: 0px 0px 11px 3px yellow;
+        margin: 20px;
+        width: 680px;
+        padding: 23px;
+        font-size: 20px;
+        text-align: center;
+        
+        font-size: 34px;
+       padding-bottom: 90px;
+       height: 600px;margin-left: -50px;
+    }
 
+    .productsbyid img {
+        width: 500px;
+        height: 420px;border-radius: 20px;
+    }
+    #addTocart{
+        width: 500px;margin-left: 70px;text-align: center;
+    }
+  
+    
 }
 
 @media screen and (min-width:980px) and (max-width:1070px) {
