@@ -14,7 +14,7 @@ function Beef(){
         async function itemfetch(){
             let data=await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef');
             let res=await data.json();
-            setItem(res.meals)
+            setItem(res.meals.map((item, index) => ({...item,price: 100 + (Number(item.idMeal) % 15) * 20})));
         }
         itemfetch();
     },[])

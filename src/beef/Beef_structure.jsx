@@ -3,6 +3,7 @@ function Beef_structure({item}){
     
     <img src={item.strMealThumb} alt="no pic" />
     <p>{item.idMeal}:  {item.strMeal}</p>
+    <p>Price: ₹{item.price}</p>
     </div>)
 }
 export default Beef_structure

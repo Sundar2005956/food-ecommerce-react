@@ -13,7 +13,7 @@ function ProductsByid() {
         async function item() {
             let data = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
             let res = await data.json()
-            setProduct(res.meals[0])
+            setProduct({...res.meals[0],price: 100 + (Number(res.meals[0].idMeal) % 15) * 20});
         }
         item()
     }, [id])
@@ -22,7 +22,9 @@ function ProductsByid() {
         <div className="productsbyid"> 
         <img src={product.strMealThumb} alt="dds" />
          <p>{product.idMeal}: {product.strMeal}</p>
-          <p>Country: {product.strCountry}</p> </div> 
+          <p>Country: {product.strCountry}</p> 
+          <p>Price: ₹{product.price}</p></div> 
+           
           </center> 
           <div style={{ textAlign: "center", marginTop: "-10px", marginBottom: "10px" }} id="addTocart" >
             <div style={{ textAlign: "center" }} >

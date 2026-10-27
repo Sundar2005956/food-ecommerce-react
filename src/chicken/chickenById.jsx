@@ -15,7 +15,7 @@ function ChickenById() {
         async function itemById() {
             let data = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`);
             let res = await data.json()
-            setItem(res.meals[0])
+             setItem({...res.meals[0],price: 100 + (Number(res.meals[0].idMeal) % 15) * 20});
         }
         itemById()
     }, [id])
@@ -26,6 +26,7 @@ function ChickenById() {
                 <p>{item.idMeal}: {item.strMeal}</p>
 
                 <p>Country: {item.strCountry}</p>
+                <p>Price: ₹{item.price}</p>
             </div></center>
             <div style={{ textAlign: "center", margingitTop: "-10px", marginBottom: "10px" }} id="addTocart"><button onClick={() => addtoCart(item)} style={{backgroundColor:isAdded?"yellow":"white",color:"black"}}>{isAdded?"Added ✓":"+Add"}</button></div>
         <div id="aboutid">

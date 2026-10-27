@@ -86,7 +86,7 @@
     border: 1px solid white;
     border-radius: 10px;
     width: 250px;
-    height: 200px;
+    height: 250px;
     padding: 7px;
     text-align: center;
     cursor: pointer;
@@ -156,7 +156,7 @@
     box-shadow: 1px 1px 1px 2px rgb(244, 238, 238);
     border-radius: 10px;
     width: 250px;
-    height: 230px;
+    height: 250px;
     padding: 7px;
     text-align: center;
     margin-top: 10px;cursor: pointer;
@@ -215,7 +215,7 @@
 
 .cart {
     padding: 10px;
-    width: 400px;
+    width: 500px;
     height: 440px;
     background-color: #fff;
     position: absolute;
@@ -223,11 +223,11 @@
     right: 32px;
     color: black;
     border: 4px solid rgb(13, 219, 20);
-    margin-right: 70px;
+    margin-right: 10px;
 }
 
 .cart #cart-height {
-    height: 400px;
+    height: 350px;
     overflow: auto;
 }
 
@@ -241,25 +241,24 @@
     padding: 5px;
     display: flex;
     margin: 5px;
-    height: 130px;
+    height: 150px;line-height: 9px;
 }
 
 .cart-item img {
-    margin-top: 15px;
+    margin-top: 25px;
     margin-right: 10px;
 }
 
 .cart-item p {
-    font-size: 16px;
+    font-size: 16px;;
 }
 
 .cart #Incre-decre {
     display: flex;
-
     height: 25px;
-
-    margin-top: -10px;
+    margin-top: -20px;
     text-align: center;
+    margin-right: -30px;
     float: right;
 }
 
@@ -271,9 +270,9 @@
 
 .cart-item .cart-p {
     justify-content: center;
-    width: 300px;
+    width: 350px;
     margin: 5px;
-    text-align: center;
+    text-align: start;
 }
 
 
@@ -357,8 +356,16 @@
     margin-left: 35px;
 } 
 
+.cart .payment{
+   font-size: 16px;
+}
 
-
+.cart .payment .payment-button{
+    margin-top: -38px;text-align: end;
+}
+.cart .payment .payment-button button{
+    margin-right: 18px;
+}
 @media screen and (max-width:700px) {
     #navlist2 {
         display: grid;
@@ -383,7 +390,7 @@
         border: 2px solid white;
         border-radius: 10px;
         width: 850px;
-        height: 750px;
+        height: 900px;
         padding: 7px;
         cursor: pointer;
         font-size: 60px;
@@ -412,9 +419,9 @@
 
 
     #navlist2 img {
-        width: 270px;
+        width: 230px;
         border-radius: 20px;
-        height: 250px;
+        height: 230px;
         margin-top: 40px;
         margin-left: 20px
     }
@@ -492,14 +499,30 @@
         border: 4px solid rgb(13, 219, 20);
         font-weight: bold;
     }
-
+    .cart .payment{
+        height: 150px;display: grid;font-size: 30px;margin-left: 25px;margin-top: -100px;
+    }
+    .cart .payment select{
+            margin-left: 0px !important;;width: 150px !important;height: 30px !important;margin-top: 20px !important;font-size: 20px !important;
+    }
+    .cart .payment select option{
+        font-size: 5px !important;
+    }
+    
+    .cart .payment .payment-button{
+    width: 400px;margin-left: 400px;margin-top: -140px;display: flex;
+    }
+    .cart .payment .payment-button button{
+        width: 200px !important;margin-right: 100px;margin-left: -110px !important;font-size: 24px !important;margin-top: 50px !important;
+    }
     .cart #cart-clearall {
         background-color: #137228;
-        width: 250px !important;
-        margin-top: 30px !important;
+        width: 150px !important;
+        margin-top: 60px !important;
         height: 60px !important;
         font-size: 40px;
         color: white;
+        margin-left: 10px !important;
     }
 
 
@@ -555,7 +578,7 @@
         box-shadow: 1px 1px 1px 2px rgb(239, 237, 237);
         border-radius: 10px;
         width: 800px;
-        height: 730px;
+        height: 830px;
         font-size: 43px;
         font-weight: bold;
         padding: 7px;
@@ -678,6 +701,7 @@
         font-size: 30px;
         font-size: 36px;
        padding-bottom: 60px;
+       height: 770px !important;
     }
 
     .productsbyid img {
@@ -862,6 +886,8 @@
         width: 190px;
      }
 
+
+
 @media screen and (min-width:701px) and (max-width:1070px) {
     #navlist1 {
         display: none;
@@ -874,9 +900,9 @@
     }
 
     #navlist2 img {
-        width: 180px;
+        width: 140px;
         border-radius: 10px;
-        height: 150px;
+        height: 140px;
         margin-top: 40px;
         margin-left: 20px;
         margin-left: -30px;
@@ -956,7 +982,7 @@
         border: 2px solid white;
         border-radius: 10px;
         width: 550px;
-        height: 700px;
+        height: 750px;
         padding: 7px;
         cursor: pointer;
         font-size: 40px;
@@ -985,7 +1011,7 @@
         border: 2px solid white;
         border-radius: 10px;
         width: 550px;
-        height: 650px;
+        height: 680px;
         padding: 7px;
         cursor: pointer;
         font-size: 38px;
@@ -1014,7 +1040,7 @@
     .cart {
         padding: 10px;
         width: 750px;
-        height: 800px;
+        height: 1070px;
         background-color: #fff;
         position: absolute;
         top: 150px;
@@ -1025,12 +1051,27 @@
     }
 
     .cart #cart-clearall {
-        background-color: #137228;
-        width: 250px !important;
-        margin-top: 30px !important;
+        background-color: #11ab32;
+        width: 150px !important;
+        margin-top: -130px !important ;
         height: 60px !important;
-        font-size: 40px;
+        font-size: 20px;
         color: white;
+       margin-left: -70px !important;
+        
+    }
+    .cart .payment{
+        height: 150px;display: grid;font-size: 25px;margin-top: 360px;margin-left: 25px;
+    }
+    .cart .payment select{
+            width: 150px !important;height: 30px !important;margin-top: 20px !important;font-size: 20px !important;
+    }
+    
+    .cart .payment .payment-button{
+    width: 400px;margin-left: 350px;margin-top: -140px;
+    }
+    .cart .payment .payment-button button{
+        width: 200px !important;margin-right: 100px;margin-left: -110px !important;font-size: 24px !important;margin-top: 70px !important;
     }
 
 
@@ -1044,9 +1085,9 @@
 
 
     .cart-item p {
-        font-size: 27px;
-        margin-left: 60px;
-        width: 350px;
+        font-size: 24px;
+        margin-left: 30px;line-height: 10px;
+        width: 440px;
     }
 
     #cart-height .cart-item img {
@@ -1055,18 +1096,18 @@
     }
 
     .cart #cart-height {
-        height: 700px;
+        height: 500px;
         overflow: auto;
     }
 
     .cart #Incre-decre {
-        height: 50px;width: 300px;
+        height: 50px;width: 300px;margin-right: -130px;
     }
 
     .cart #Incre-decre button {
         height: 40px;
         margin-left: 15px;
-        margin-top: 0px;
+        margin-top: 30px;font-size: 24px;
     }
 
     #about p {
@@ -1327,7 +1368,7 @@
         
         font-size: 34px;
        padding-bottom: 90px;
-       height: 600px;margin-left: -50px;
+       height: 670px;margin-left: -50px;
     }
 
     .productsbyid img {
@@ -1512,3 +1553,9 @@
     }
 
 }
+
+
+
+
+
+
