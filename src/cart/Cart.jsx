@@ -36,7 +36,7 @@ function Cart() {
                         <img src={item.strMealThumb} alt={item.strMeal} />
 
                         <div className="cart-p">
-                            <p>{item.idMeal} {item.strMeal}</p>
+                            <h2>{item.idMeal} {item.strMeal}</h2>
                             <p>Price: ₹{item.price}</p>
                             <p>Total: ₹{item.price * item.quantity}</p>
                             <p>Quantity: {item.quantity}</p>
